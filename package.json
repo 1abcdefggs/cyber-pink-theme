@@ -1,0 +1,121 @@
+{
+  "name": "cyber-pink-theme",
+  "displayName": "Cyber Pink",
+  "description": "Dark cyber theme with neon pink accents",
+  "version": "0.1.0",
+  "publisher": "1abcdefggs",
+  "license": "MIT",
+  "keywords": ["theme", "dark", "cyber", "pink"],
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/1abcdefggs/cyber-pink-theme.git"
+  },
+  "engines": {
+    "vscode": "^1.74.0"
+  },
+  "categories": ["Themes"],
+  "main": "./extension.js",
+  "activationEvents": [
+    "onStartupFinished",
+    "onCommand:cyberPink.editThemeColorAtCursor",
+    "onCommand:cyberPink.switchAccentPreset"
+  ],
+  "contributes": {
+    "themes": [
+      {
+        "label": "💗 CYBER PINK — Pink",
+        "uiTheme": "vs-dark",
+        "path": "./themes/cyber-pink-pink-theme.json",
+        "description": "Pink accent. Base Pure Black | Deep Blue-Black | Midnight Navy | Surface Dark Slate"
+      },
+      {
+        "label": "🌸 CYBER PINK — Pink Soft",
+        "uiTheme": "vs-dark",
+        "path": "./themes/cyber-pink-pink-soft-theme.json",
+        "description": "Muted pink accent. Softer glow for extended sessions"
+      },
+      {
+        "label": "💙 CYBER PINK — Cyan",
+        "uiTheme": "vs-dark",
+        "path": "./themes/cyber-pink-cyan-theme.json",
+        "description": "Cyan accent. Base Pure Black | Deep Blue-Black | Midnight Navy | Surface Dark Slate"
+      },
+      {
+        "label": "🫧 CYBER PINK — Cyan Soft",
+        "uiTheme": "vs-dark",
+        "path": "./themes/cyber-pink-cyan-soft-theme.json",
+        "description": "Muted cyan accent. Softer glow for extended sessions"
+      }
+    ],
+    "commands": [
+      {
+        "command": "cyberPink.editThemeColorAtCursor",
+        "title": "Edit Theme Color at Cursor",
+        "category": "Cyber Pink"
+      },
+      {
+        "command": "cyberPink.switchAccentPreset",
+        "title": "Switch Accent Preset",
+        "category": "Cyber Pink"
+      }
+    ],
+    "menus": {
+      "editor/context": [
+        {
+          "command": "cyberPink.editThemeColorAtCursor",
+          "group": "2_zcommand@5"
+        }
+      ]
+    },
+    "configuration": {
+      "title": "Cyber Pink",
+      "properties": {
+        "cyberPink.background.base": {
+          "type": "string",
+          "default": "#000000",
+          "description": "Base background color (editor, terminal)"
+        },
+        "cyberPink.background.deep": {
+          "type": "string",
+          "default": "#08090f",
+          "description": "Deep background color (activity bar, title bar)"
+        },
+        "cyberPink.background.mid": {
+          "type": "string",
+          "default": "#0d0e17",
+          "description": "Mid background color (sidebar, panels)"
+        },
+        "cyberPink.background.surface": {
+          "type": "string",
+          "default": "#111320",
+          "description": "Surface background color (widgets, inputs)"
+        },
+        "cyberPink.accent.preset": {
+          "type": "string",
+          "default": "pink",
+          "enum": ["pink", "cyan", "green", "amber", "fuchsia", "blue", "custom"],
+          "enumDescriptions": [
+            "Pink Storm (#FF3399) - default",
+            "Cyan Wave (#00f0ff)",
+            "Neon Lime (#5AFF19)",
+            "Warning Amber (#FFC800)",
+            "Psycho Fuchsia (#CC1669)",
+            "Circuit Blue (#00AEEF)",
+            "Use custom accent color"
+          ],
+          "description": "Accent color preset for the theme"
+        },
+        "cyberPink.accent.customColor": {
+          "type": "string",
+          "default": "#FF3399",
+          "description": "Custom accent color (used when preset is 'custom')"
+        },
+        "cyberPink.accent.customHover": {
+          "type": "string",
+          "default": "#CC297A",
+          "description": "Custom accent hover color (used when preset is 'custom')"
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,29 @@
+# Compiled output
+*.js
+!extension.js
+dist/
+*.vsix
+
+# Dependencies
+node_modules/
+
+# TypeScript
+*.tsbuildinfo
+
+# Logs
+*.log
+npm-debug.log*
+
+# OS
+.DS_Store
+Thumbs.db
+
+# Editor
+.vscode-test/
+
+# Personal notes
+NOTES.md
+
+# Examples
+examples/
+
