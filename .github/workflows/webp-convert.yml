@@ -5,9 +5,9 @@ on:
     branches:
       - main
     paths:
-      - 'images/**.png'
-      - 'images/**.jpg'
-      - 'images/**.jpeg'
+      - 'images/screenshots/**.png'
+      - 'images/screenshots/**.jpg'
+      - 'images/screenshots/**.jpeg'
 
 jobs:
   convert:
@@ -21,7 +21,7 @@ jobs:
 
       - name: Convert new images to WebP
         run: |
-          cd images
+          cd images/screenshots
           for f in *.png *.jpg *.jpeg; do
             [ -f "$f" ] || continue
             filename="${f%.*}"
