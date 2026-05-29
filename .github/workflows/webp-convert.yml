@@ -25,7 +25,7 @@ jobs:
           for f in *.png *.jpg *.jpeg; do
             [ -f "$f" ] || continue
             filename="${f%.*}"
-            # skip
+            # Skip if WebP already exists
             if [ ! -f "${filename}.webp" ]; then
               cwebp -q 80 "$f" -o "${filename}.webp"
             fi
