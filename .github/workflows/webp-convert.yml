@@ -1,0 +1,37 @@
+name: Convert Images to WebP
+
+on:
+  push:
+    branches:
+      - main
+    paths:
+      - 'images/**.png'
+      - 'images/**.jpg'
+      - 'images/**.jpeg'
+
+jobs:
+  convert:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout repo
+        uses: actions/checkout@v4
+
+      - name: Install WebP tools
+        run: sudo apt-get update && sudo apt-get install -y webp
+
+      - name: Convert new images to WebP
+        run: |
+          cd images
+          for f in *.png *.jpg *.jpeg; do
+            [ -f "$f" ] || continue
+            filename="${f%.*}"
+            # skip
+            if [ ! -f "${filename}.webp" ]; then
+              cwebp -q 80 "$f" -o "${filename}.webp"
+            fi
+          done
+
+      - name: Commit and Push WebP images
+        uses: stefanzweifel/git-auto-commit-action@v5
+        with:
+          commit_message: "chrono: auto-convert images to webp"
