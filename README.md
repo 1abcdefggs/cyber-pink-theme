@@ -9,11 +9,12 @@ A dark cyberpunk-inspired theme for Visual Studio Code with neon accents.
 ![Cyber Pink — Cyan](images/screenshots/cyan.webp)
 
 
-![window-border](images/screenshots/cyberpink-windowborder.png)
+
+*Window border*
+![window-border](images/screenshots/cyberpink-windowborder.webp)
 
 
 ## Theme Variants
-
 | Theme | Accent | Description |
 |-------|--------|-------------|
 | 💗 **Pink** | `#FF3399` | Vivid neon pink |
