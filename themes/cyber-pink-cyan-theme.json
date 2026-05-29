@@ -2,6 +2,8 @@
   "name": "Cyber Cyan",
   "type": "dark",
   "colors": {
+    "window.activeBorder": "#00f0ff",
+    "window.inactiveBorder": "#4a5568",
     "foreground": "#c8d1da",
     "disabledForeground": "#4a5568",
     "descriptionForeground": "#4a5568",

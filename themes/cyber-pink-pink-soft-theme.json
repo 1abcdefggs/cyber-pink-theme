@@ -2,6 +2,8 @@
   "name": "Cyber Pink Soft",
   "type": "dark",
   "colors": {
+    "window.activeBorder": "#D92882",
+    "window.inactiveBorder": "#4a5568",
     "foreground": "#c8d1da",
     "disabledForeground": "#4a5568",
     "descriptionForeground": "#4a5568",

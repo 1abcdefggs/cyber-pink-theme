@@ -3,12 +3,14 @@
 A dark cyberpunk-inspired theme for Visual Studio Code with neon accents.
 
 ## Screenshots
-
+*💗 CYBER PINK — Pink color*
 ![Cyber Pink — Pink](images/screenshots/pink.webp)
-*💗 CYBER PINK — Pink*
-
+*💙 CYBER PINK — Cyan color*
 ![Cyber Pink — Cyan](images/screenshots/cyan.webp)
-*💙 CYBER PINK — Cyan*
+
+
+![window-border](images/screenshots/cyberpink-windowborder.png)
+
 
 ## Theme Variants
 
@@ -22,6 +24,9 @@ A dark cyberpunk-inspired theme for Visual Studio Code with neon accents.
 ## Features
 
 - Pure black background for maximum contrast and reduced eye strain
+
+- If the color is too intense, soften it. It will change slightly.
+
 - **4 theme variants** — Vivid and Soft for both Pink and Cyan
 - Layered background hierarchy (outer = darkest, inner = lighter)
 - Hover-inverted UI elements — statusbar and menubar items invert on hover
@@ -91,6 +96,9 @@ Right-click in any editor and choose **Edit Theme Color at Cursor** to tweak tok
 | **Muted** | `#4a5568` | Disabled, placeholder |
 
 ## Changelog
+
+### 0.2.1
+- Fixed theme colors (updated active window border color to cyber cyan)
 
 ### 0.2.0
 - Added 4 theme variants: Pink, Pink Soft, Cyan, Cyan Soft
